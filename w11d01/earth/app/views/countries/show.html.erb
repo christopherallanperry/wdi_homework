@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @country.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @country.image %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @country.size %>
+</p>
+
+<p>
+  <strong>Population:</strong>
+  <%= @country.population %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @country.currency %>
+</p>
+
+<p>
+  <strong>Gdp:</strong>
+  <%= @country.gdp %>
+</p>
+
+<p>
+  <strong>Continents:</strong>
+  <%= @country.continents %>
+</p>
+
+<%= link_to 'Edit', edit_country_path(@country) %> |
+<%= link_to 'Back', countries_path %>

@@ -1,0 +1,129 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+body {
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  visibility: hidden;
+}
+
+h2 {
+  padding: 1.6em 0 0 0;
+}
+
+main {
+  background-color: #fff;
+  background-image: url("../images/frame.png");
+  background-repeat: no-repeat;
+  border-radius: 7px;
+  height: auto;
+  width: 504px;
+}
+
+footer {
+  clear: both;
+}
+
+li {
+  display: inline-block;
+}
+
+.hero {
+  background-color: #1c5380;
+  background-image: url("../images/bgtile.png");
+  background-repeat: repeat-x;
+  height: 280px;
+  margin: 0;
+}
+
+.container {
+  margin: -150px auto 0;
+  max-width: 960px;
+}
+
+.leftside {
+  float: left;
+  margin: 0 3em;
+  max-width: 35%;
+}
+.rightside {
+  float: right;
+  max-width: 65%;
+}
+
+.login_button {
+  float: right;
+  padding: 10px;
+  border: 1px solid #06365f;
+  border-radius: 5px;
+  box-shadow: -3px 3px 3px #1c5380;
+  margin-top: 14px;
+}
+
+.home_icon, .login_txt {
+  display: inline-block;
+}
+
+.login_txt {
+  color: #eee;
+  font-weight: bolder;
+  margin: 0 auto;
+}
+
+.inner_box {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.outer_box {
+  width: 504px;
+}
+
+.downloads {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.appstore {
+  margin-right: 1em;
+}
+
+.sitelinks {
+  float: left;
+}
+
+.mainfooter {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.menuitem {
+  font-weight:bolder;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.menuitem:link, .menuitem:hover, .menuitem:visited {
+  color: #06365f;
+}
+
+.copyright {
+  float: right;
+}
+
+.rightslink {
+  font-weight:bolder;
+  text-decoration: none;
+}
+
+.rightslink:link, .rightslink:hover, .rightslink:visited {
+  color: #bbb;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "renovation-tracker",
+  "description": "An application to track renovation costs on an old property",
+  "main": "index.js",
+  "authors": [
+    "Chris Perry"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ChrisofArabia/WDI_LDN_24_HOMEWORK",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

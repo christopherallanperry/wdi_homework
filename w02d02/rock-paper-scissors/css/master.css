@@ -1,0 +1,54 @@
+body {
+  background-color: #000;
+  color: lime;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+span {
+  border-bottom: 2px solid lime;
+  font-weight: bolder;
+}
+
+button {
+  /* TBD */
+}
+
+.scoreBoard {
+  border: 2px solid lime;
+  height: 10em;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 1em;
+}
+
+.scoreHead {
+  border-bottom: 2px solid lime;
+  padding-bottom: 1em;
+}
+
+.leftScore, .rightScore {
+  height: 5em;
+  padding: 10px;
+  width: 30%;
+}
+
+.leftScore {
+  float: left;
+  margin-left: 1.5em;
+}
+
+.rightScore {
+  float: right;
+  margin-right: 1.5em;
+}
+
+.choose {
+  clear: both;
+}

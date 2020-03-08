@@ -1,0 +1,49 @@
+<% if (error) { %>
+  <div class="alert alert-danger text-center" role="alert"><%= error %></div>
+<% } %>
+
+<section class="container">
+  <h1>Edit Renovation Property Details</h1>
+  <form action="/renovations/<%= renovation._id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    <div class="form-group">
+      <label for="renovation_property">Renovation Description: <span class="requiredProperty">**</label>
+      <input type="text" class="form-control" id="renovation_property" name="renovation[property]" placeholder="Description of property under renovation" value="<%= renovation.property %>">
+    </div>
+    <div class="form-group">
+      <label for="renovation_address1">Address Line 1:</label>
+      <input type="text" class="form-control" id="renovation_address1" name="renovation[address1]" placeholder="Address Line 1" value="<%= renovation.address1 %>">
+    </div>
+    <div class="form-group">
+      <label for="renovation_address2">Address Line 2:</label>
+      <input class="form-control" id="renovation_address2" name="renovation[address2]" placeholder="Address Line 2" value="<%= renovation.address2 %>">
+    </div>
+    <div class="form-group">
+      <label for="renovation_town">Town / City:</label>
+      <input class="form-control" id="renovation_town" name="renovation[town]" placeholder="Description" value="<%= renovation.town %>">
+    </div>
+    <div class="form-group">
+      <label for="renovation_county">County / State:</label>
+      <input class="form-control" id="renovation_county" name="renovation[county]" placeholder="Description" value="<%= renovation.county %>">
+    </div>
+    <div class="form-group">
+      <label for="renovation_postcode">Post / Zip Code: <span class="requiredProperty">**</label>
+      <input class="form-control" id="renovation_postcode" name="renovation[postcode]" placeholder="Description" value="<%= renovation.postcode %>">
+    </div>
+    <div class="form-group">
+      <label for="renovation_owner">Owner's Name: <span class="requiredProperty">**</label>
+      <input class="form-control" id="renovation_owner" name="renovation[owner]" placeholder="Description" value="<%= renovation.owner %>">
+    </div>
+    <div class="form-group">
+      <label for="renovation_contact">Client's Contact Number: <span class="requiredProperty">**</label>
+      <input class="form-control" id="renovation_contact" name="renovation[contactNo]" placeholder="Description" value="<%= renovation.contactNo %>">
+    </div>
+    <div class="form-group">
+      <label for="renovation_email">Client's eMail Address: <span class="requiredProperty">**</label>
+      <input class="form-control" id="renovation_email" name="renovation[email]" placeholder="Description" value="<%= renovation.email %>">
+    </div>
+    <div><span class="requiredProperty">**</span> required field(s)</div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</section>

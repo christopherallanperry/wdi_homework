@@ -1,0 +1,64 @@
+-- Question 1
+SELECT name
+FROM country
+WHERE population = (
+  SELECT MIN(population)
+  FROM country
+  WHERE region = 'Southern Europe'
+);
+
+--  Question 2
+SELECT language
+FROM countrylanguage
+WHERE countrycode = (
+  SELECT countrycode
+  FROM countrylanguage
+  WHERE countrycode = 'VAT'
+);
+
+-- Question 3
+SELECT name
+FROM country
+WHERE region = 'Southern Europe'
+AND code
+IN (SELECT countrycode
+  FROM countrylanguage
+  WHERE language = 'Italian'
+  AND percentage = 100);
+
+-- Question 4
+SELECT name
+FROM city
+WHERE name != 'San Marino'
+AND countrycode = (
+  SELECT code
+  FROM country
+  WHERE name = 'San Marino'
+);
+
+-- Question 5
+SELECT name
+FROM country
+WHERE region = 'South America'
+AND code
+IN (
+  SELECT countrycode
+  FROM city
+  WHERE name
+  LIKE 'Serra%'
+  AND name != 'Serravalle'
+);
+
+--  Question 6
+SELECT name
+FROM cityWHERE id = (
+  SELECT capital
+  FROM country
+  WHERE name = 'Brazil'
+);
+
+
+-- Question 7
+SELECT name
+FROM city
+WHERE population  = 91084;

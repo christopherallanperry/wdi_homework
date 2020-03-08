@@ -1,0 +1,39 @@
+<h1>Edit Cycle</h1>
+<form name="editCycle" ng-submit="cyclesEdit.update()">
+  <div class="form-group">
+    <label for="model">Model</label>
+    <input type="text" id="model" placeholder="Model" ng-model="cyclesEdit.cycle.model" value="{{ cyclesEdit.cycle.model }}">
+  </div>
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input type="text" id="image" placeholder="Image" ng-model="cyclesEdit.cycle.image" value="{{ cyclesEdit.cycle.image }}">
+  </div>
+  <div class="form-group">
+    <label for="price">GBP Price</label>
+    <input type="text" id="price" placeholder="Image" ng-model="cyclesEdit.cycle.priceGbp" value="{{ cyclesEdit.cycle.priceGbp }}">
+  </div>
+  <div class="form-group">
+    <label for="desc">Description</label>
+    <input type="text" id="desc" placeholder="Description" ng-model="cyclesEdit.cycle.desc" value="{{ cyclesEdit.cycle.desc }}">
+  </div>
+  <div class="form-group">
+    <label for="frame">Frame Details</label>
+    <input type="text" id="frame" placeholder="Frame details" ng-model="cyclesEdit.cycle.frame" value="{{ cyclesEdit.cycle.frame }}">
+  </div>
+  <div class="form-group">
+    <label for="fork">Fork Details</label>
+    <input type="text" id="fork" placeholder="Fork details" ng-model="cyclesEdit.cycle.fork" value="{{ cyclesEdit.cycle.fork }}">
+  </div>
+  <div class="form-group">
+    <label for="frontDera">Front Derailleur Details</label>
+    <input type="text" id="frontDera" placeholder="Front Derailleur details" ng-model="cyclesEdit.cycle.frontDera" value="{{ cyclesEdit.cycle.frontDera }}">
+  </div>
+  <div class="form-group">
+    <label for="rearDera">Rear Derailleur Details</label>
+    <input type="text" id="rearDera" placeholder="Rear Derailleur details" ng-model="cyclesEdit.cycle.rearDera" value="{{ cyclesEdit.cycle.rearDera }}">
+  </div>
+  <input type="submit" class="btn btn-primary">
+
+</form>
+
+<!-- {{ cyclesEdit.user }} -->

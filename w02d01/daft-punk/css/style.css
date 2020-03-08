@@ -1,0 +1,36 @@
+body {
+  background-color: #000;
+  background-image: url("../images/daft_punk_background.jpg");
+  background-size: cover;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background-color: #ddddff;
+  background-image: url("../images/daft_punk_helmet.jpg");
+  background-size: cover;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  height: 196px;
+  list-style-type: none;
+  margin: 1px;
+  padding: 10px;
+  text-align: center;
+  width: 196px;
+}
+
+.headerImage {
+  margin: 0 auto;
+  display: block;
+}

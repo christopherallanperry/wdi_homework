@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @continent.name %>
+</p>
+
+<p>
+  <strong>Highpoint name:</strong>
+  <%= @continent.highpoint_name %>
+</p>
+
+<p>
+  <strong>Highpoint elevation:</strong>
+  <%= @continent.highpoint_elevation %>
+</p>
+
+<p>
+  <strong>Lowpoint name:</strong>
+  <%= @continent.lowpoint_name %>
+</p>
+
+<p>
+  <strong>Lowpoint elevation:</strong>
+  <%= @continent.lowpoint_elevation %>
+</p>
+
+<%= link_to 'Edit', edit_continent_path(@continent) %> |
+<%= link_to 'Back', continents_path %>

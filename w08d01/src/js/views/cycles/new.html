@@ -1,0 +1,36 @@
+<h1>New Cycle</h1>
+<form name="newCycle" ng-submit="cyclesNew.create()">
+  <div class="form-group">
+    <label for="model">Model</label>
+    <input type="text" id="model" placeholder="Model" ng-model="cyclesNew.cycle.model">
+  </div>
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input type="text" id="image" placeholder="Image" ng-model="cyclesNew.cycle.image">
+  </div>
+  <div class="form-group">
+    <label for="price">GBP Price</label>
+    <input type="text" id="price" placeholder="Price in GBP" ng-model="cyclesNew.cycle.priceGbp">
+  </div>
+  <div class="form-group">
+    <label for="desc">Description</label>
+    <input type="text" id="desc" placeholder="Add description" ng-model="cyclesNew.cycle.desc">
+  </div>
+  <div class="form-group">
+    <label for="frame">Front Derailleur Details</label>
+    <input type="text" id="frame" placeholder="Frame details" ng-model="cyclesNew.cycle.frame">
+  </div>
+  <div class="form-group">
+    <label for="fork">Fork Details</label>
+    <input type="text" id="fork" placeholder="Fork details" ng-model="cyclesNew.cycle.fork">
+  </div>
+  <div class="form-group">
+    <label for="frontDera">Front Derailleur Details</label>
+    <input type="text" id="frontDera" placeholder="FrontDerailleur details" ng-model="cyclesNew.cycle.frontDera">
+  </div>
+  <div class="form-group">
+    <label for="rearDera">Rear Derailleur Details</label>
+    <input type="text" id="rearDera" placeholder="Rear Derailleur Details" ng-model="cyclesNew.cycle.rearDera">
+  </div>
+  <input type="submit" class="btn btn-primary">
+</form>

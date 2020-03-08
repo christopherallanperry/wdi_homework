@@ -1,0 +1,12 @@
+<h1>Edit Quote</h1>
+<form method='post' action='/quotes/<%= quote.quote_id %>'>
+  <input type='hidden' name='_method' value='put'>
+
+  <label for='quote_text'>Quotation</label>
+  <input type='text' name='quote[quote_text]' id='quote_text' value='<%= quote.quote_text %>'>
+
+  <label for='quote_originator'>Quothee</label>
+  <input type='text' name='quote[quote_originator]' id='quote_originator' value='<%= quote.quote_originator %>'>
+
+  <input class='btn' type='submit' value='Update'>
+</form>

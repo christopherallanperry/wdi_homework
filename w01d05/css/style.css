@@ -1,0 +1,67 @@
+body {
+  background-color: #ffffcc;
+  background-image: url("../images/shrek-2.jpg");
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+h1 {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+h2, p {
+  color: #fff;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.backdrop {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 5px 5px 5px 12px;
+}
+
+.gameBoard {
+  padding-left: 12px;
+  margin-top: 0.5em;
+}
+
+.square {
+  background-color: #d8d91d;
+  background-image: url("../images/base_image_150px.png");
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 3em;
+  height: 150px;
+  margin: 0.1em;
+  width: 150px;
+}
+
+
+.playerX {
+  background-color: red;
+  background-image: url("../images/shrek_150px.png");
+}
+
+.playerO {
+  background-color: blue;
+  background-image: url("../images/donkey_150px.jpg");
+}
+
+.clearButton {
+  font-size: 1.5em;
+  height: 1.5em;
+  margin: 0 auto;
+}

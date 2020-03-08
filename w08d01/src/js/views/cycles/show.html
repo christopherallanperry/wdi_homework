@@ -1,0 +1,18 @@
+<section>
+  <section class="left-side">
+    <h2>{{ cyclesShow.cycle.model }}</h2>
+    <p>{{ cyclesShow.cycle.desc }}</p>
+    <p><span class="cycle-label">Price:</span> GBP {{ cyclesShow.cycle.priceGbp }}</p>
+    <p><span class="cycle-label">Frame:</span> {{ cyclesShow.cycle.frame }}</p>
+    <p><span class="cycle-label">Fork:</span> {{ cyclesShow.cycle.fork }}</p>
+    <p><span class="cycle-label">Front Derailleur:</span> {{ cyclesShow.cycle.frontDera }}</p>
+    <p><span class="cycle-label">Rear Derailleur:</span> {{ cyclesShow.cycle.rearDera }}</p>
+  </section>
+  <section class="right-side">
+    <img src="../images/{{ cyclesShow.cycle.image }}" alt="Image of the {{ cyclesShow.cycle.name }}">
+  </section>
+  <div class="item-mgr">
+    <a ui-sref="cyclesEdit({id: cyclesShow.cycle._id})">Edit Cycle</a>&nbsp;
+    <a ui-sref="cyclesDelete({id: cyclesShow.cycle._id})">Delete Cycle</a>
+  </div>
+</section>

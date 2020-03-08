@@ -1,0 +1,47 @@
+<% if (error) { %>
+  <div class="alert alert-danger text-center" role="alert"><%= error %></div>
+<% } %>
+
+<section class="container">
+  <h1>Add a New Property for Renovation</h1>
+  <form action="/renovations" method="post">
+    <div class="form-group">
+      <label for="renovation_property">Property Decription: <span class="requiredProperty">**</label>
+      <input type="text" class="form-control" id="renovation_property" name="renovation[property]" placeholder="Renovation description">
+    </div>
+    <div class="form-group">
+      <label for="renovation_address1">Address Line 1: <span class="requiredProperty">**</label>
+      <input type="text" class="form-control" id="renovation_address1" name="renovation[address1]" placeholder="Add address line 1...">
+    </div>
+    <div class="form-group">
+      <label for="renovation_address2">Address Line 2:</label>
+      <input type="text" class="form-control" id="renovation_address2" name="renovation[address2]" placeholder="Add address line 2 (if reqd.)...">
+    </div>
+    <div class="form-group">
+      <label for="renovation_street">Town / City:</label>
+      <input type="text" class="form-control" id="renovation_town" name="renovation[town]" placeholder="Add town or city...">
+    </div>
+    <div class="form-group">
+      <label for="renovation_county">County / State:</label>
+      <input type="text" class="form-control" id="renovation_county" name="renovation[county]" placeholder="Add county or state...">
+    </div>
+    <div class="form-group">
+      <label for="renovation_postcode">Post / Zip Code: <span class="requiredProperty">**</label>
+      <input type="text" class="form-control" id="renovation_postcode" name="renovation[postcode]" placeholder="Add post or zip code...">
+    </div>
+    <div class="form-group">
+      <label for="renovation_owner">Client's Name: <span class="requiredProperty">**</label>
+      <input type="text" class="form-control" id="renovation_owner" name="renovation[owner]" placeholder="Add owner's name...">
+    </div>
+    <div class="form-group">
+      <label for="renovation_contact">Client's Contact Number: <span class="requiredProperty">**</label>
+      <input type="text" class="form-control" id="renovation_contact" name="renovation[contactNo]" placeholder="Add owner's contact number...">
+    </div>
+    <div class="form-group">
+      <label for="renovation_email">Client's eMail Address: <span class="requiredProperty">**</label>
+      <input type="text" class="form-control" id="renovation_email" name="renovation[email]" placeholder="Add owner's email address... e.g. joe.bloggs@example.com">
+    </div>
+    <div><span class="requiredProperty">**</span> required field(s)</div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</section>

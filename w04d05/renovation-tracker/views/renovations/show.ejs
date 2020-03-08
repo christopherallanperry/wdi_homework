@@ -1,0 +1,35 @@
+<% if (error) { %>
+  <div class="alert alert-danger text-center" role="alert"><%= error %></div>
+  <% } %>
+  <section class="container">
+    <h1><%= renovation.property %></h1>
+    <div class="row">
+      <div class="col-md-6">
+        <p><strong>Address 1:</strong> <%= renovation.address1 %></p>
+        <p><strong>Address 2:</strong> <%= renovation.address2 %></p>
+        <p><strong>Town/City:</strong> <%= renovation.town %></p>
+        <p><strong>County/State:</strong> <%= renovation.county %></p>
+        <p><strong>Postcode:</strong> <%= renovation.postcode %></p>
+        <p><strong>Owner:</strong> <%= renovation.owner %></p>
+        <p><strong>Contact No:</strong> <%= renovation.contactNo %></p>
+        <p><strong>eMail Address:</strong> <a href="mailto:<%= renovation.email %>"><%= renovation.email %></a></p>
+        <ul class="list-inline">
+          <li><a class="btn btn-primary" href="/renovations/<%= renovation._id %>/edit"><span class="glyphicon glyphicon-pencil"></span>  Edit</a></li>
+
+          <li>
+            <form action="/renovations/<%= renovation._id %>" method="post">
+              <input type="hidden" name="_method" value="delete">
+              <button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>  Delete </button>
+            </form>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h4>Placeholder for cost summary</h4>
+        <ul class="list-inline">
+          <li><a class="btn btn-primary" href="/renovations/<%= renovation._id %>/costs">Show Current Costs</a></li>
+          <li><a class="btn btn-primary" href="/costs/<%= renovation._id %>/new">Add New Cost</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>

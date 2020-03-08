@@ -1,0 +1,145 @@
+// Import all of your scss files here
+body {
+  background-color: #ccddff;
+  // background-image: url("../images/shrek-2.jpg");
+  background-size: cover;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.angular-test {
+  color: #000;
+  background-color: #f00;
+  font-size: 2em;
+  text-align: center;
+}
+
+h1 {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+h2, p {
+  color: #fff;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 510px;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 5px 5px 12px;
+  text-align: center;
+}
+
+.gameBoard {
+  // padding-left: 12px;
+  margin-top: 0.5em;
+}
+
+.square {
+  background-color: #ccc;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 3em;
+  height: 150px;
+  margin: 10px;
+  width: 150px;
+}
+
+.playerX {
+  background-color: red;
+}
+
+.playerO {
+  background-color: blue;
+}
+
+.clearButton {
+  background-color: #0f0;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #333;
+  display: block;
+  font-size: 1.5em;
+  margin: 0 auto;
+  padding: 0.7em;
+}
+
+/* START OF MODAL CSS */
+
+/* The Modal (background) */
+.modal {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  height: 100%; /* Full height */
+  left: 0;
+  overflow: auto; /* Enable scroll if needed */
+  position: fixed; /* Stay in place */
+  text-align: center;
+  top: 0;
+  width: 100%; /* Full width */
+  z-index: 1; /* Sit on top */
+}
+
+/* Modal Content */
+.modal-content {
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border: 1px solid #888;
+  border-radius: 25px;
+  margin: 12% auto;
+  padding: 0;
+  position: relative;
+  width: 50%;
+  background-color: #fdfdfd;
+}
+
+/* Modal Body */
+.modal-body {
+  min-height: 5em;
+  padding: 2em;
+  text-align: left;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 0.8em;
+  margin-top: 0.5em;
+}
+
+.close:hover, .close:focus {
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top: -200px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+  from {top: -200px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+/* END OF MODAL CSS */

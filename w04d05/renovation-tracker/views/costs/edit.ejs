@@ -1,0 +1,48 @@
+<% if (error) { %>
+  <div class="alert alert-danger text-center" role="alert"><%= error %></div>
+  <% } %>
+
+  <section class="container">
+    <h1>Edit Cost Details</h1>
+    <form action="/costs/<%= cost._id %>" method="post">
+      <input type="hidden" name="_method" value="put">
+      <div class="row">
+        <div class="col-md-6">
+          <!--  contractorId -->
+          <div class="form-group">
+            <label for="cost_contractorId">Contractor ID</label>
+            <input type="text" class="form-control" id="cost_contractorId" name="cost[contractorId]" placeholder="Contractor ID" value="<%= cost.contractorId %>">
+          </div>
+          <!--  costCategory -->
+          <div class="form-group">
+            <label for="cost_category">Cost Category</label>
+            <input type="text" class="form-control" id="cost_category" name="cost[costCategory]" placeholder="Cost category..." value="<%= cost.costCategory %>">
+          </div>
+          <!--  costValue -->
+          <div class="form-group">
+            <label for="cost_value">Invoice Value (excl. tax)</label>
+            <input type="text" class="form-control" id="cost_value" name="cost[costValue]" placeholder="Invoice value (excluding tax, if separate)..." value="<%= cost.costValue %>">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <!--  contractorRef -->
+          <div class="form-group">
+            <label for="cost_contractorRef">Contractor Reference</label>
+            <input type="text" class="form-control" id="cost_contractorRef" name="cost[contractorRef]" placeholder="Contractor's invoice reference..." value="<%= cost.contractorRef %>">
+          </div>
+          <!--  costDesc -->
+          <div class="form-group">
+            <label for="cost_desc">Invoiced Item Description</label>
+            <input type="text" class="form-control" id="cost_desc" name="cost[costDesc]" placeholder="Include a brief desctiption of item invoiced for..." value="<%= cost.costDesc %>">
+          </div>
+          <!--  taxAdded -->
+          <div class="form-group">
+            <label for="tax_added">Invoiced Tax Value</label>
+            <input type="text" class="form-control" id="tax_added" name="cost[taxAdded]" placeholder="Invoiced tax amount (if itemised separately)..." value="<%= cost.taxAdded %>">
+          </div>
+        </div>
+      </div>
+      <div><span class="requiredProperty">**</span> required field(s)</div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </section>

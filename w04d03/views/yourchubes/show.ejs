@@ -1,0 +1,10 @@
+<h1><%= yourchube.title %></h1>
+<h4>in <%= yourchube.genre %></h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= yourchube.videoid %>" frameborder="0" allowfullscreen></iframe>
+<p><%= yourchube.description %></p>
+<p><%= yourchube.views %></p>
+<a href="/yourchubes/<%= yourchube._id %>/edit" class="btn btn-primary">Edit</a>
+<form action="/yourchubes/<%= yourchube._id %>" method="post">
+  <input type="hidden" value="delete" name="_method">
+  <input type="submit" class="btn btn-danger" value="Delete">
+</form>

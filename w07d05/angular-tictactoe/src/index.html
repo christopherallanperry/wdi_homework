@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="tictactoeApp" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TicTacToe - Angular</title>
+    <!-- inject:js -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+  <body ng-controller="tictactoeCtrl as tictactoe">
+    <header class="backdrop">
+      <h2>Rules of the game:</h2>
+      <p>You know Tic Tac Toe, you know the rules...</p>
+    </header>
+    <main>
+      <div class="gameBoard">
+        <ul>
+          <li ng-repeat="square in tictactoe.board track by $index" ng-click="tictactoe.squareClicked(square, square.sqrId)"  id="{{ square.sqrId }}" class="square">
+          </li>
+        </ul>
+      </div>
+      <button ng-click="tictactoe.clearBoard()" id="clearButton" class="clearButton" type="button" name="button">New Game</button>
+    </main>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">{{ }}</div>
+      </div>
+    </div>
+  </body>
+</html>

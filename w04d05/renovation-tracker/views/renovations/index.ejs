@@ -1,0 +1,25 @@
+<section class="container">
+  <h1>All Renovations</h1>
+  <% renovations.forEach((renovation, i, original) => { %>
+    <% if (i === 0) { %>
+      <div class="row">
+    <% } else if (i !== 0 && i % 3 === 0) { %>
+      </div>
+      <div class="row">
+    <% }; %>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3><%= renovation.property %></h3>
+            <p><strong>Address:</strong> <%= renovation.address1 %></p>
+            <p><strong>Postcode:</strong> <%= renovation.postcode %></p>
+            <p><strong>Owner:</strong> <%= renovation.owner %></p>
+            <p><a href="/renovations/<%= renovation._id %>" class="btn btn-primary" role="button">Show property details</a></p>
+          </div>
+        </div>
+      </div>
+    <% if (i === original.length-1) { %>
+      </div>
+    <% }; %>
+  <% }); %>
+</section>

@@ -1,0 +1,21 @@
+<h1>Add Chube</h1>
+<form action="/yourchubes" method="post">
+  <div class="form-group">
+    <label for="chube_name">Title</label>
+    <input type="text" class="form-control" id="chube_name" placeholder="Title" name="yourchube[title]">
+  </div>
+  <div class="form-group">
+    <label for="yourchube_description">Description</label>
+    <textarea class="form-control" id="yourchube_description" placeholder="Description" name="yourchube[description]"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="yourchube_videoid">Video ID</label>
+    <p>Submit your YouTube links using only the highlighted portion of the video URL as here: https://www.youtube.com/watch?v=<span class="yturl">Pckf3_6SlPg</span></p>
+    <input type="text" class="form-control" id="yourchube_videoid" placeholder="Video ID" name="yourchube[videoid]">
+  </div>
+  <div class="form-group">
+    <label for="yourchube_genre">Genre</label>
+    <input type="text" class="form-control" id="yourchube_genre" placeholder="Genre" name="yourchube[genre]">
+  </div>
+  <input type="submit" value="Submit" class="btn btn-primary">
+</form>

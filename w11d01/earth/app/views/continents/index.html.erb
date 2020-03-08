@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Continents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Highpoint name</th>
+      <th>Highpoint elevation</th>
+      <th>Lowpoint name</th>
+      <th>Lowpoint elevation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @continents.each do |continent| %>
+      <tr>
+        <td><%= continent.name %></td>
+        <td><%= continent.highpoint_name %></td>
+        <td><%= continent.highpoint_elevation %></td>
+        <td><%= continent.lowpoint_name %></td>
+        <td><%= continent.lowpoint_elevation %></td>
+        <td><%= link_to 'Show', continent %></td>
+        <td><%= link_to 'Edit', edit_continent_path(continent) %></td>
+        <td><%= link_to 'Destroy', continent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Continent', new_continent_path %>

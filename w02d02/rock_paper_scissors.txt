@@ -1,0 +1,9 @@
+1) Create some html for my buttons, so that the user can choose what to play.
+
+2) Need a way to get the value of what the user played e.g. the user played paper
+
+3) Need to randomise the computer play to give me a value
+
+4) Depending on the two plays, calculate the winner
+
+5) Display the result

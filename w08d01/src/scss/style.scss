@@ -1,0 +1,61 @@
+main {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+img {
+  float: right;
+  width: 80%;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+.logo {
+  float: left;
+}
+
+.left-side {
+  float: left;
+  margin-left: 5%;
+  max-width: 30%;
+}
+
+.right-side {
+  float: right;
+  margin-right: 5%;
+  max-width: 60%;
+}
+
+.item-mgr {
+  clear: both;
+  margin: 5%;
+  max-width: 1140px;
+}
+
+.cycle-list-item {
+    list-style: none;
+    display: inline-block;
+    margin: 2em;
+}
+
+.cycle.tile {
+  width: 30%;
+  display: block;
+  margin-top: 2em;
+}
+
+.cycle-label {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+}
+
+.cycle-thumb {
+  width: 300px;
+  height: auto;
+}
+
+.cycle-model {
+  text-align: center;
+  line-height: 1.5em;
+}

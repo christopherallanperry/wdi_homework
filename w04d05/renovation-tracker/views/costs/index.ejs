@@ -1,0 +1,44 @@
+<% let grandTotal = 0 %>
+<section class="container">
+  <h1>Renovation Costs for: </h1>
+  <table class="table table-striped">
+    <thead>
+      <th>Contractor</th>
+      <th>Reference</th>
+      <th>Category</th>
+      <th>Description</th>
+      <th>Net</th>
+      <th>Tax</th>
+      <th>Sub-Total</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </thead>
+    <tbody>
+      <% costs.forEach((cost, i, original) => { %>
+        <tr>
+          <td><%= cost.contractorId %></td>
+          <td><%= cost.contractorRef %></td>
+          <td><%= cost.costCategory %></td>
+          <td><%= cost.costDesc %></td>
+          <td><%= cost.costValue %></td>
+          <td><%= cost.taxAdded %></td>
+          <td><%= cost.costValue + cost.taxAdded %></td>
+          <td><a class="btn btn-primary" href="/costs/<%= cost._id %>/edit"><span class="glyphicon glyphicon-pencil"></a></td>
+          <td>
+            <form action="/costs/<%= cost._id %>" method="post">
+              <input type="hidden" name="_method" value="delete">
+              <button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+            </form>
+          </td>
+          <% grandTotal += (cost.costValue + cost.taxAdded) %>
+        </tr>
+      <% }); %>
+    </tbody>
+    <tfoot>
+      <td colspan="5"></td>
+      <td><strong>Grand Total</strong></td>
+      <td><strong><%= grandTotal %></strong></td>
+      <td colspan="2"></td>
+    </tfoot>
+  </table>
+</section>

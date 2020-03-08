@@ -1,0 +1,16 @@
+<main>
+  <h1>All Quotes</h1>
+  <% for(let i = 0; i < quotes.length; i++) { %>
+    <div>
+      <div class="tile">
+        <p class="quote"><strong>Quote:</strong> <a href="/quotes/<%= quotes[i]['quote_id'] %>">"<%= quotes[i]['quote_text'] %>"</a> ~ <%= quotes[i]['quote_originator'] %></p>
+      </div>
+      <a class='btn' href='/quotes/<%= quotes[i].quote_id %>/edit'>Edit quote</a>
+      <form method='post' action='/quotes/<%= quotes[i].quote_id %>'>
+        <input type='hidden' name='_method' value='delete'>
+        <input class='btn' type='submit' value='Delete'>
+      </form>
+    </div>
+  <% } %>
+  </ul>
+</main>

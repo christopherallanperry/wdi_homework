@@ -1,0 +1,10 @@
+<h1>All Chubes</h1>
+<ul class="list-unstyled">
+  <% restaurants.forEach(yourchube => { %>
+    <li>
+      <ul class="list-unstyled">
+        <li><a href="/yourchubes/<%= yourchube._id %>"><h4><%= yourchube.title %></h4></a></li>
+      </ul>
+    </li>
+  <% }) %>
+</ul>

@@ -1,0 +1,10 @@
+<h2>Men's Road Bikes</h2>
+<ul>
+  <li ng-repeat="cycle in cyclesIndex.cycles track by $index" class="cycle-list-item">
+    <div class="cycle-tile">
+      <a ui-sref="cyclesShow({id: cycle._id})"><img src="../images/{{ cycle.image }}" class="cycle-thumb" alt="Image for {{ cycle.model }}"><p class="cycle-model">{{ cycle.model }}</p></a>
+      <p class="cycle-model">GBP: {{ cycle.priceGbp }}</p>
+    </div>
+
+  </li>
+</ul>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  highpoint_name: MyString
+  highpoint_elevation: 1
+  lowpoint_name: MyString
+  lowpoint_elevation: 1
+
+two:
+  name: MyString
+  highpoint_name: MyString
+  highpoint_elevation: 1
+  lowpoint_name: MyString
+  lowpoint_elevation: 1

@@ -1,0 +1,7 @@
+<h1>Quote: <%= quote.quote_text %></h1>
+<p><strong>Quothee:</strong> <%= quote.quote_originator %></p>
+<a class='btn' href='/quotes/<%= quote.quote_id %>/edit'>Edit</a>
+<form method='post' action='/quotes/<%= quote.quote_id %>'>
+  <input type='hidden' name='_method' value='delete'>
+  <input class='btn' type='submit' value='Delete'>
+</form>

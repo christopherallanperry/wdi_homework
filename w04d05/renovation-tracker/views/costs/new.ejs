@@ -1,0 +1,67 @@
+<% if (error) { %>
+  <div class="alert alert-danger text-center" role="alert"><%= error %></div>
+  <% } %>
+
+  <section class="container">
+    <h1>Add a New Cost for Property</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Property Name: <%= renovation.property %></h4>
+        <p><strong>Address 1:</strong> <%= renovation.address1 %></p>
+        <p><strong>Address 2:</strong> <%= renovation.address2 %></p>
+        <p><strong>Town/City:</strong> <%= renovation.town %></p>
+        <p><strong>County/State:</strong> <%= renovation.county %></p>
+        <p><strong>Postcode:</strong> <%= renovation.postcode %></p>
+        <p><strong>Owner:</strong> <%= renovation.owner %></p>
+        <p><strong>Contact No:</strong> <%= renovation.contactNo %></p>
+        <p><strong>eMail Address:</strong> <a href="mailto:<%= renovation.email %>"><%= renovation.email %></a></p>
+      </div>
+      <div class="col-md-6"><h4>Placeholder for current cost summary</h4></div>
+    </div>
+    <form action="/costs" method="post">
+      <!--  propertyId -->
+      <div class="form-group">
+        <input type="hidden" class="form-control" name="cost[propertyId]" value="<%= renovation._id %>">
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <!--  contractorId -->
+          <div class="form-group">
+            <label for="cost_contractorId">Contractor ID</label>
+            <input type="text" class="form-control" id="cost_contractorId" name="cost[contractorId]" placeholder="Contractor ID">
+          </div>
+
+          <!--  costCategory -->
+          <div class="form-group">
+            <label for="cost_category">Cost Category</label>
+            <input type="text" class="form-control" id="cost_category" name="cost[costCategory]" placeholder="Cost category...">
+          </div>
+          <!--  costValue -->
+          <div class="form-group">
+            <label for="cost_value">Invoice Value (excl. tax)</label>
+            <input type="text" class="form-control" id="cost_value" name="cost[costValue]" placeholder="Invoice value (excluding tax, if separate)...">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <!--  contractorRef -->
+          <div class="form-group">
+            <label for="cost_contractorRef">Contractor Reference</label>
+            <input type="text" class="form-control" id="cost_contractorRef" name="cost[contractorRef]" placeholder="Contractor's invoice reference...">
+          </div>
+          <!--  costDesc -->
+          <div class="form-group">
+            <label for="cost_desc">Invoiced Item Description</label>
+            <input type="text" class="form-control" id="cost_desc" name="cost[costDesc]" placeholder="Include a brief desctiption of item invoiced for...">
+          </div>
+
+          <!--  taxAdded -->
+          <div class="form-group">
+            <label for="tax_added">Invoiced Tax Value</label>
+            <input type="text" class="form-control" id="tax_added" name="cost[taxAdded]" placeholder="Invoiced tax amount (if itemised separately)...">
+          </div>
+        </div>
+      </div>
+      <div><span class="requiredProperty">**</span> required field(s)</div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </section>
